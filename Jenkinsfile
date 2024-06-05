@@ -29,6 +29,6 @@ node {
     
     stage('Trigger ManifestUpdate') {
                 echo "triggering updatemanifestjob"
-                build job: 'updatemanifest', parameters: [string(name: 'DOCKERTAG', value: env.BUILD_NUMBER)]
+                build job: 'jenkins-gitops-k8s', parameters: [string(name: 'DOCKERTAG', value: env.BUILD_NUMBER)]
         }
 }
